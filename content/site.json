@@ -1,0 +1,159 @@
+{
+  "site": {
+    "title": "Luis Piñero",
+    "tagline": "Fotógrafo documental y cineasta",
+    "email": "info@luispineroalvarez.com",
+    "instagram": "https://instagram.com/on.ecstasy",
+    "instagram_handle": "@on.ecstasy",
+    "brand": "https://tierraignota.com",
+    "brand_name": "Tierra Ignota",
+    "copyright": "© 2026 Luis Piñero. Todos los derechos reservados.",
+    "seo_description": "Fotografía documental y cine de viajes con una mirada editorial, humana y cinematográfica.",
+    "hero_label": "Fotografía documental · Cine · Viaje",
+    "hero_title": "Luis Piñero",
+    "hero_intro": "Imágenes hechas desde el terreno: entre territorio, encuentro y la línea frágil que separa paisaje y vida humana.",
+    "hero_cta_label": "Ver trabajo",
+    "hero_cta_link": "work.html",
+    "hero_secondary_label": "Sobre mí",
+    "hero_secondary_link": "about.html"
+  },
+  "home": {
+    "intro_kicker": "Una mirada hecha de distancia, presencia y paciencia.",
+    "intro_text": "Trabajo entre fotografía y cine documental, con proyectos que nacen del viaje, del contexto y de la necesidad de mirar con atención. No busco coleccionar lugares, sino entender qué respira en ellos.",
+    "featured_title": "Historias seleccionadas",
+    "featured_text": "Una selección breve de trabajos donde paisaje, cultura y presencia humana se tensan entre sí.",
+    "featured_projects": [
+      {
+        "title": "Pakistán",
+        "meta": "Documental de viaje · Karachi, Hyderabad, Lahore, Peshawar",
+        "description": "Una aproximación cinematográfica a la vida cotidiana, la densidad urbana y la identidad cultural en distintos territorios del país."
+      },
+      {
+        "title": "Mashatu & Karongwe",
+        "meta": "Naturaleza · Narrativa de campo · África austral",
+        "description": "Trabajo visual en entornos naturales donde la observación lenta y la narrativa ecológica construyen el relato."
+      },
+      {
+        "title": "Tierra Ignota",
+        "meta": "Expediciones de autor · Dirección creativa",
+        "description": "Una plataforma para viajar de forma inmersiva a lugares remotos y culturalmente significativos, con una mirada documental y humana."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "title": "Mirar no basta. Hay que saber estar.",
+    "lead": "Soy Luis, fotógrafo documental y cineasta de viajes. Trabajo entre imagen fija y movimiento, buscando historias donde territorio, cultura y experiencia humana siguen entrelazados de verdad.",
+    "paragraphs": [
+      "Me interesan los lugares donde todavía se percibe el peso de la memoria, el rito, la geografía o la identidad. No solo lo que un lugar parece, sino lo que hace sentir cuando uno permanece el tiempo suficiente.",
+      "Mi trabajo intenta ir más allá de la descripción. Busco atmósfera, tensión, intimidad y una relación honesta entre las personas y el espacio que habitan.",
+      "Además de encargos y proyectos personales, desarrollo expediciones de autor a través de Tierra Ignota. Esa experiencia me ha dado algo más que logística: me ha obligado a trabajar con sensibilidad, flexibilidad y respeto real por el contexto."
+    ],
+    "highlight_title": "Lo que define mi trabajo",
+    "highlights": [
+      "Fotografía documental y cinematografía con enfoque editorial.",
+      "Experiencia en entornos remotos y culturalmente complejos.",
+      "Narrativa visual con sensibilidad estética y criterio de campo.",
+      "Capacidad para unir autoría, documentación y confianza profesional."
+    ]
+  },
+  "work": {
+    "eyebrow": "Trabajo",
+    "title": "Proyectos con contexto, no solo imágenes bonitas.",
+    "intro": "Aquí no hay postales sueltas. Cada proyecto nace de una relación concreta con el lugar, con las personas y con el tiempo necesario para mirar de verdad.",
+    "projects": [
+      {
+        "title": "Pakistán",
+        "location": "Karachi · Hyderabad · Lahore · Peshawar",
+        "year": "2025",
+        "format": "Fotografía / Cine documental",
+        "intro": "Una aproximación a la complejidad del país a través de sus ritmos urbanos, sus márgenes y sus gestos cotidianos.",
+        "explores": "Explora la tensión entre densidad, tradición, identidad y vida diaria en distintos territorios.",
+        "approach": "Una mirada inmersiva, cercana y atmosférica, construida desde la observación y el desplazamiento.",
+        "context": "Trabajo en movimiento, con atención a la calle, al rostro humano y a la fricción entre caos y belleza."
+      },
+      {
+        "title": "Mohana",
+        "location": "Sindh, Pakistán",
+        "year": "2025",
+        "format": "Documental / Narrativa de comunidad",
+        "intro": "Una historia centrada en una comunidad anfibia cuya relación con el agua define su vida, su trabajo y su memoria.",
+        "explores": "Explora la identidad, la adaptación y la fragilidad de una forma de vida profundamente ligada al territorio.",
+        "approach": "Cámara cercana, ritmo contemplativo y atención a los detalles que sostienen una cultura.",
+        "context": "Trabajo desarrollado desde el respeto, el tiempo compartido y la necesidad de no convertir la diferencia en espectáculo."
+      },
+      {
+        "title": "Tierra Ignota",
+        "location": "Múltiples destinos",
+        "year": "Actualidad",
+        "format": "Dirección creativa / Expediciones / Branding editorial",
+        "intro": "Una plataforma de expediciones de autor a lugares remotos y culturalmente significativos.",
+        "explores": "Explora otra forma de viajar: más atenta, más exigente y más conectada con la experiencia humana y el contexto local.",
+        "approach": "Narrativa visual, dirección editorial y construcción de marca desde la autenticidad y el deseo de descubrimiento.",
+        "context": "Una mezcla de sensibilidad documental, criterio estético y trabajo real sobre el terreno."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "Colaboraciones con fondo, criterio y mirada.",
+    "intro": "Trabajo con marcas, medios, instituciones y proyectos que entienden que una buena imagen no es solo cuestión de estética, sino de contexto, presencia y dirección.",
+    "items": [
+      {
+        "title": "Fotografía documental",
+        "text": "Cobertura y construcción de historias visuales con una mirada humana, editorial y profundamente ligada al lugar."
+      },
+      {
+        "title": "Cinematografía",
+        "text": "Piezas documentales, branded documentaries y trabajos audiovisuales donde el ritmo, la atmósfera y la intención importan tanto como la técnica."
+      },
+      {
+        "title": "Narrativa para marcas de viaje",
+        "text": "Historias visuales con un lenguaje más maduro y autoral para marcas, destinos o proyectos que quieren algo más que contenido genérico."
+      },
+      {
+        "title": "Cobertura de expediciones",
+        "text": "Trabajo en terreno en condiciones exigentes, con capacidad para documentar sin perder sensibilidad ni criterio."
+      },
+      {
+        "title": "Dirección creativa",
+        "text": "Desarrollo de tono visual, estructura narrativa y decisiones de lenguaje para proyectos conectados con territorio, cultura y experiencia."
+      }
+    ]
+  },
+  "philosophy": {
+    "eyebrow": "Filosofía",
+    "title": "No me interesa reducir el viaje a espectáculo.",
+    "paragraphs": [
+      "Las imágenes más significativas rara vez nacen de la distancia por sí sola, sino de la calidad de atención que uno lleva al lugar.",
+      "Para mí, el trabajo documental empieza antes de levantar la cámara: en escuchar, en esperar, en entender el ritmo, en reconocer cuándo acercarse y cuándo no.",
+      "Me atraen las imágenes que sostienen belleza y complejidad al mismo tiempo. Imágenes que no simplifican lo que muestran, sino que dejan espacio para la ambigüedad, la atmósfera y la presencia.",
+      "Lo importante no es solo qué se ve, sino cómo se aborda. La confianza, el tiempo en el lugar y la sensibilidad cultural no son obstáculos al trabajo visual. Son su fundamento.",
+      "Mi trabajo vive en la tensión entre documentación y subjetividad: entre lo que ocurre y la forma en que lo siento. No pretende ser neutral. Sí honesto."
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de un proyecto que merezca la pena.",
+    "intro": "Trabajo con encargos, colaboraciones editoriales, proyectos documentales, marcas vinculadas al viaje y propuestas que exijan sensibilidad visual y criterio narrativo.",
+    "note": "Si lo que buscas es una mirada con contexto, gusto y capacidad real de trabajar sobre el terreno, escríbeme.",
+    "formspree_endpoint": "https://formspree.io/f/your-form-id",
+    "contact_items": [
+      {
+        "label": "Email",
+        "value": "info@luispineroalvarez.com",
+        "type": "email"
+      },
+      {
+        "label": "Instagram",
+        "value": "https://instagram.com/on.ecstasy",
+        "type": "url"
+      },
+      {
+        "label": "Proyecto",
+        "value": "Fotografía documental · Cine · Narrativa de viaje · Expediciones",
+        "type": "text"
+      }
+    ]
+  }
+}

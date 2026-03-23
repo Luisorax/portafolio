@@ -1,67 +1,132 @@
 backend:
-  name: github
-  repo: Luisorax/portafolio
+  name: git-gateway
   branch: main
-  site_domain: luispineroalvarez.com
 
-media_folder: "images"
-public_folder: "/images"
+local_backend: false
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: editorial_workflow
 
 collections:
-  - name: "pages"
-    label: "Páginas"
-    folder: "."
-    create: false
-    slug: "{{slug}}"
+  - name: "site_content"
+    label: "Contenido web"
     files:
-      - file: "index.html"
-        label: "Portada (Home)"
-        name: "home"
+      - label: "Contenido general"
+        name: "site"
+        file: "content/site.json"
+        format: "json"
         fields:
-          - {label: "Hero Title", name: "hero-title", widget: "string", hint: "Título principal"}
-          - {label: "Hero Subtitle", name: "hero-subtitle", widget: "text", hint: "Subtítulo"}
-
-      - file: "about.html"
-        label: "Acerca de"
-        name: "about"
-        fields:
-          - {label: "Tu Nombre", name: "name", widget: "string"}
-          - {label: "Biografía", name: "bio", widget: "text"}
-          - {label: "Foto de Perfil", name: "portrait", widget: "image"}
-
-      - file: "work.html"
-        label: "Trabajos"
-        name: "work"
-        fields:
-          - {label: "Título Sección", name: "section-title", widget: "string"}
-          - {label: "Descripción", name: "description", widget: "text"}
-          - {label: "Proyecto 1", name: "project-1-title", widget: "string"}
-          - {label: "Foto Proyecto 1", name: "project-1-image", widget: "image"}
-          - {label: "Proyecto 2", name: "project-2-title", widget: "string"}
-          - {label: "Foto Proyecto 2", name: "project-2-image", widget: "image"}
-          - {label: "Proyecto 3", name: "project-3-title", widget: "string"}
-          - {label: "Foto Proyecto 3", name: "project-3-image", widget: "image"}
-
-      - file: "services.html"
-        label: "Servicios"
-        name: "services"
-        fields:
-          - {label: "Título", name: "title", widget: "string"}
-          - {label: "Descripción General", name: "intro", widget: "text"}
-          - {label: "Servicio 1", name: "service-1", widget: "text"}
-          - {label: "Servicio 2", name: "service-2", widget: "text"}
-          - {label: "Servicio 3", name: "service-3", widget: "text"}
-
-      - file: "philosophy.html"
-        label: "Filosofía"
-        name: "philosophy"
-        fields:
-          - {label: "Título", name: "title", widget: "string"}
-          - {label: "Contenido", name: "content", widget: "markdown"}
-
-      - file: "contact.html"
-        label: "Contacto"
-        name: "contact"
-        fields:
-          - {label: "Email de Contacto", name: "email", widget: "string"}
-          - {label: "Mensaje de Bienvenida", name: "welcome-message", widget: "text"}
+          - label: "Site"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "Nombre", name: "title", widget: "string" }
+              - { label: "Subtítulo marca", name: "tagline", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string" }
+              - { label: "Instagram handle", name: "instagram_handle", widget: "string" }
+              - { label: "Tierra Ignota URL", name: "brand", widget: "string" }
+              - { label: "Nombre marca", name: "brand_name", widget: "string" }
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "SEO description", name: "seo_description", widget: "text" }
+              - { label: "Hero label", name: "hero_label", widget: "string" }
+              - { label: "Hero title", name: "hero_title", widget: "string" }
+              - { label: "Hero intro", name: "hero_intro", widget: "text" }
+              - { label: "CTA principal texto", name: "hero_cta_label", widget: "string" }
+              - { label: "CTA principal link", name: "hero_cta_link", widget: "string" }
+              - { label: "CTA secundario texto", name: "hero_secondary_label", widget: "string" }
+              - { label: "CTA secundario link", name: "hero_secondary_link", widget: "string" }
+          - label: "Home"
+            name: "home"
+            widget: "object"
+            fields:
+              - { label: "Intro kicker", name: "intro_kicker", widget: "string" }
+              - { label: "Texto introducción", name: "intro_text", widget: "text" }
+              - { label: "Título destacados", name: "featured_title", widget: "string" }
+              - { label: "Texto destacados", name: "featured_text", widget: "text" }
+              - label: "Proyectos destacados"
+                name: "featured_projects"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Meta", name: "meta", widget: "string" }
+                  - { label: "Descripción", name: "description", widget: "text" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Lead", name: "lead", widget: "text" }
+              - label: "Párrafos"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Párrafo", name: "paragraph", widget: "text" }
+              - { label: "Título highlights", name: "highlight_title", widget: "string" }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                field: { label: "Highlight", name: "highlight", widget: "string" }
+          - label: "Work"
+            name: "work"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Proyectos"
+                name: "projects"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Ubicación", name: "location", widget: "string" }
+                  - { label: "Año", name: "year", widget: "string" }
+                  - { label: "Formato", name: "format", widget: "string" }
+                  - { label: "Intro", name: "intro", widget: "text" }
+                  - { label: "Explora", name: "explores", widget: "text" }
+                  - { label: "Enfoque", name: "approach", widget: "text" }
+                  - { label: "Contexto", name: "context", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Servicios"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Texto", name: "text", widget: "text" }
+          - label: "Philosophy"
+            name: "philosophy"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - label: "Párrafos"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Párrafo", name: "paragraph", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Nota", name: "note", widget: "text" }
+              - { label: "Formspree endpoint", name: "formspree_endpoint", widget: "string" }
+              - label: "Datos de contacto"
+                name: "contact_items"
+                widget: "list"
+                fields:
+                  - { label: "Etiqueta", name: "label", widget: "string" }
+                  - { label: "Valor", name: "value", widget: "string" }
+                  - label: "Tipo"
+                    name: "type"
+                    widget: "select"
+                    options: ["email", "url", "text"]
