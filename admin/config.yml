@@ -3,7 +3,6 @@ backend:
   repo: Luisorax/portafolio
   branch: main
   site_domain: mellifluous-eclair-5d3bf1.netlify.app
-  "Fix Netlify CMS site_domain"
 
 media_folder: "images"
 public_folder: "/images"
