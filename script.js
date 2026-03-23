@@ -1,3 +1,4 @@
+
 async function loadContent() {
   const response = await fetch('content/site.json', { cache: 'no-store' });
   if (!response.ok) throw new Error('No se pudo cargar el contenido editable.');
@@ -12,25 +13,43 @@ function create(el, className, text) {
   return node;
 }
 
-function renderHeader(site) {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
+const pageKey = document.body.dataset.page || 'home';
+const pageFiles = { home: 'index.html', about: 'about.html', work: 'work.html', services: 'services.html', contact: 'contact.html' };
+
+function getLanguage() {
+  if (window.location.pathname.startsWith('/en')) return 'en';
+  const saved = localStorage.getItem('site_lang');
+  if (saved === 'en' || saved === 'es') return saved;
+  return 'es';
+}
+
+function buildHref(page, lang) {
+  const esPaths = { home: '/', about: '/sobre-mi', work: '/trabajo', services: '/servicios', contact: '/contacto' };
+  const enPaths = { home: '/en', about: '/en/about', work: '/en/work', services: '/en/services', contact: '/en/contact' };
+  return (lang === 'en' ? enPaths : esPaths)[page] || '/';
+}
+
+function altLanguage(lang) { return lang === 'es' ? 'en' : 'es'; }
+
+function renderHeader(site, lang) {
   const nav = [
-    ['index.html', 'Inicio'],
-    ['about.html', 'Sobre mí'],
-    ['work.html', 'Trabajo'],
-    ['services.html', 'Servicios'],
-    ['philosophy.html', 'Filosofía'],
-    ['contact.html', 'Contacto']
+    ['about', site.nav.about],
+    ['work', site.nav.work],
+    ['services', site.nav.services],
+    ['contact', site.nav.contact]
   ];
 
   const header = create('header', 'site-header');
   header.innerHTML = `
     <div class="header-inner">
-      <a class="logo" href="index.html">${site.title}<small>${site.tagline}</small></a>
-      <button class="nav-toggle" type="button" aria-expanded="false">Menú</button>
+      <a class="logo" href="${buildHref('home', lang)}" aria-label="Home">${site.title}<small>${site.tagline}</small></a>
+      <div class="header-actions">
+        <button class="nav-toggle" type="button" aria-expanded="false">Menú</button>
+        <a class="lang-switch" href="${buildHref(pageKey, altLanguage(lang))}" data-lang="${altLanguage(lang)}">${site.lang_switch}</a>
+      </div>
       <nav class="site-nav" aria-label="Principal">
         <ul>
-          ${nav.map(([href, label]) => `<li><a href="${href}" class="${path === href ? 'active' : ''}">${label}</a></li>`).join('')}
+          ${nav.map(([page, label]) => `<li><a href="${buildHref(page, lang)}" class="${pageKey === page ? 'active' : ''}">${label}</a></li>`).join('')}
         </ul>
       </nav>
     </div>
@@ -42,6 +61,10 @@ function renderHeader(site) {
     siteNav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(siteNav.classList.contains('open')));
   });
+  const langSwitch = header.querySelector('.lang-switch');
+  langSwitch.addEventListener('click', () => {
+    localStorage.setItem('site_lang', altLanguage(lang));
+  });
 }
 
 function renderFooter(site) {
@@ -50,8 +73,8 @@ function renderFooter(site) {
     <div class="footer-inner">
       <div>${site.copyright}</div>
       <div class="footer-links">
-        <a href="mailto:${site.email}">Email</a>
-        <a href="${site.instagram}" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="mailto:${site.email}">${site.footer.email}</a>
+        <a href="${site.instagram}" target="_blank" rel="noreferrer">${site.footer.instagram}</a>
         <a href="${site.brand}" target="_blank" rel="noreferrer">${site.brand_name}</a>
       </div>
     </div>
@@ -72,7 +95,7 @@ function revealOnScroll() {
   items.forEach((item) => obs.observe(item));
 }
 
-function renderHome(data) {
+function renderHome(data, lang) {
   const { site, home } = data;
   const main = qs('#app');
   main.innerHTML = `
@@ -83,29 +106,30 @@ function renderHome(data) {
           <h1>${site.hero_title}</h1>
           <div class="hero-intro">${site.hero_intro}</div>
         </div>
-        <div class="hero-side fade-in">
-          <p>${home.intro_kicker}</p>
-          <p style="margin-top: 14px;">${home.intro_text}</p>
-          <div class="cta-row">
-            <a class="button" href="${site.hero_cta_link}">${site.hero_cta_label}</a>
-            <a class="button-secondary" href="${site.hero_secondary_link}">${site.hero_secondary_label}</a>
+        <aside class="hero-side fade-in">
+          <div class="hero-side-inner">
+            <p class="hero-side-kicker">${home.intro_kicker}</p>
+            <p>${home.intro_text}</p>
+            <div class="cta-row">
+              <a class="button" href="${site.hero_cta_link}">${site.hero_cta_label}</a>
+              <a class="button-secondary" href="${site.hero_secondary_link}">${site.hero_secondary_label}</a>
+            </div>
           </div>
-          <div class="admin-note">Después podrás editar estos textos desde <strong>/admin</strong> sin tocar HTML.</div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section wrap fade-in">
-      <div class="split">
+    <section class="section wrap fade-in home-featured">
+      <div class="split home-intro-block">
         <div>
           <div class="kicker">${home.featured_title}</div>
-          <h2 class="section-title">Una portada más limpia, con más aire y más intención.</h2>
+          <h2 class="section-title">${home.featured_heading}</h2>
         </div>
         <div class="lead">${home.featured_text}</div>
       </div>
-      <div class="card-grid" style="margin-top: 34px;">
+      <div class="card-grid featured-grid" style="margin-top: 34px;">
         ${home.featured_projects.map((item) => `
-          <article class="card">
+          <article class="card featured-card">
             <div class="meta">${item.meta}</div>
             <h3>${item.title}</h3>
             <p>${item.description}</p>
@@ -155,9 +179,9 @@ function renderWork(data) {
             <div class="meta">${item.location} · ${item.year} · ${item.format}</div>
             <h3>${item.title}</h3>
             <p>${item.intro}</p>
-            <p><strong>Explora:</strong> ${item.explores}</p>
-            <p><strong>Enfoque:</strong> ${item.approach}</p>
-            <p><strong>Contexto:</strong> ${item.context}</p>
+            <p><strong>${work.labels.explores}:</strong> ${item.explores}</p>
+            <p><strong>${work.labels.approach}:</strong> ${item.approach}</p>
+            <p><strong>${work.labels.context}:</strong> ${item.context}</p>
           </article>
         `).join('')}
       </div>
@@ -168,36 +192,31 @@ function renderWork(data) {
 function renderServices(data) {
   const { services } = data;
   const main = qs('#app');
+  const first = services.items[0];
+  const rest = services.items.slice(1);
   main.innerHTML = `
-    <section class="page-hero wrap fade-in">
+    <section class="page-hero wrap fade-in services-hero">
       <div class="kicker">${services.eyebrow}</div>
       <h1>${services.title}</h1>
       <div class="page-intro">${services.intro}</div>
     </section>
-    <section class="section wrap">
-      <div class="card-grid">
-        ${services.items.map((item) => `
-          <article class="service-card fade-in">
+    <section class="section wrap services-layout">
+      <article class="service-feature fade-in">
+        <div class="meta">${services.feature_meta}</div>
+        <h2>${first.title}</h2>
+        <p class="lead">${first.text}</p>
+      </article>
+      <div class="services-grid-advanced">
+        ${rest.map((item, index) => `
+          <article class="service-card service-card-premium fade-in ${index % 3 === 0 ? 'wide' : ''}">
+            <div class="service-card-top">
+              <span class="service-index">0${index + 2}</span>
+              <div class="service-rule"></div>
+            </div>
             <h3>${item.title}</h3>
             <p>${item.text}</p>
           </article>
         `).join('')}
-      </div>
-    </section>
-  `;
-}
-
-function renderPhilosophy(data) {
-  const { philosophy } = data;
-  const main = qs('#app');
-  main.innerHTML = `
-    <section class="page-hero wrap fade-in">
-      <div class="kicker">${philosophy.eyebrow}</div>
-      <h1>${philosophy.title}</h1>
-    </section>
-    <section class="section wrap">
-      <div class="philosophy-block fade-in">
-        ${philosophy.paragraphs.map((p) => `<p class="lead" style="font-size:clamp(1.15rem, 2vw, 1.5rem);">${p}</p>`).join('')}
       </div>
     </section>
   `;
@@ -227,52 +246,55 @@ function renderContact(data) {
         </div>
         <form class="contact-form fade-in" name="contacto" method="POST" action="${contact.formspree_endpoint}">
           <div>
-            <label for="name">Nombre</label>
+            <label for="name">${contact.form.name}</label>
             <input id="name" name="name" required>
           </div>
           <div>
-            <label for="email">Email</label>
+            <label for="email">${contact.form.email}</label>
             <input id="email" name="email" type="email" required>
           </div>
           <div>
-            <label for="project">Tipo de proyecto</label>
+            <label for="project">${contact.form.project}</label>
             <select id="project" name="project">
-              <option>Documental</option>
-              <option>Editorial</option>
-              <option>Marca / travel narrative</option>
-              <option>Expedición</option>
-              <option>Otro</option>
+              ${contact.form.options.map((option) => `<option>${option}</option>`).join('')}
             </select>
           </div>
           <div>
-            <label for="message">Mensaje</label>
+            <label for="message">${contact.form.message}</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <button class="button" type="submit">Enviar</button>
+          <button class="button" type="submit">${contact.form.send}</button>
         </form>
       </div>
     </section>
   `;
 }
 
-const renderers = {
-  home: renderHome,
-  about: renderAbout,
-  work: renderWork,
-  services: renderServices,
-  philosophy: renderPhilosophy,
-  contact: renderContact
-};
+const renderers = { home: renderHome, about: renderAbout, work: renderWork, services: renderServices, contact: renderContact };
 
 (async function init() {
   try {
-    const data = await loadContent();
-    renderHeader(data.site);
-    const page = document.body.dataset.page || 'home';
-    document.title = `${data.site.title} — ${page === 'home' ? data.site.tagline : page.charAt(0).toUpperCase() + page.slice(1)}`;
+    const allData = await loadContent();
+    const lang = getLanguage();
+    const data = {
+      site: allData.site[lang],
+      home: allData.home[lang],
+      about: allData.about[lang],
+      work: allData.work[lang],
+      services: allData.services[lang],
+      contact: allData.contact[lang]
+    };
+    document.documentElement.lang = lang;
+    renderHeader(data.site, lang);
+    const pageTitles = {
+      es: { home: data.site.title, about: 'Sobre mí', work: 'Trabajo', services: 'Servicios', contact: 'Contacto' },
+      en: { home: data.site.title, about: 'About', work: 'Work', services: 'Services', contact: 'Contact' }
+    };
+    document.title = `${data.site.title} — ${pageTitles[lang][pageKey] || data.site.tagline}`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.content = data.site.seo_description;
-    renderers[page](data);
+    if (!renderers[pageKey]) throw new Error('Esta página ya no está disponible.');
+    renderers[pageKey](data, lang);
     renderFooter(data.site);
     revealOnScroll();
   } catch (error) {

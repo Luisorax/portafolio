@@ -1,0 +1,18 @@
+/index.html / 301
+/about.html /sobre-mi 301
+/work.html /trabajo 301
+/services.html /servicios 301
+/contact.html /contacto 301
+/philosophy.html / 301
+/filosofia / 301
+
+/sobre-mi /about.html 200
+/trabajo /work.html 200
+/servicios /services.html 200
+/contacto /contact.html 200
+
+/en /index.html 200
+/en/about /about.html 200
+/en/work /work.html 200
+/en/services /services.html 200
+/en/contact /contact.html 200

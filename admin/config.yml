@@ -13,7 +13,7 @@ collections:
   - name: "site_content"
     label: "Contenido web"
     files:
-      - label: "Contenido general"
+      - label: "Contenido general bilingüe"
         name: "site"
         file: "content/site.json"
         format: "json"
@@ -22,111 +22,309 @@ collections:
             name: "site"
             widget: "object"
             fields:
-              - { label: "Nombre", name: "title", widget: "string" }
-              - { label: "Subtítulo marca", name: "tagline", widget: "string" }
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Instagram URL", name: "instagram", widget: "string" }
-              - { label: "Instagram handle", name: "instagram_handle", widget: "string" }
-              - { label: "Tierra Ignota URL", name: "brand", widget: "string" }
-              - { label: "Nombre marca", name: "brand_name", widget: "string" }
-              - { label: "Copyright", name: "copyright", widget: "string" }
-              - { label: "SEO description", name: "seo_description", widget: "text" }
-              - { label: "Hero label", name: "hero_label", widget: "string" }
-              - { label: "Hero title", name: "hero_title", widget: "string" }
-              - { label: "Hero intro", name: "hero_intro", widget: "text" }
-              - { label: "CTA principal texto", name: "hero_cta_label", widget: "string" }
-              - { label: "CTA principal link", name: "hero_cta_link", widget: "string" }
-              - { label: "CTA secundario texto", name: "hero_secondary_label", widget: "string" }
-              - { label: "CTA secundario link", name: "hero_secondary_link", widget: "string" }
-          - label: "Home"
+              - label: "Español"
+                name: "es"
+                widget: "object"
+                fields:
+                  - { label: "Nombre", name: "title", widget: "string" }
+                  - { label: "Subtítulo", name: "tagline", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "Instagram URL", name: "instagram", widget: "string" }
+                  - { label: "Usuario Instagram", name: "instagram_handle", widget: "string", required: false }
+                  - { label: "Marca URL", name: "brand", widget: "string" }
+                  - { label: "Nombre marca", name: "brand_name", widget: "string" }
+                  - { label: "Copyright", name: "copyright", widget: "string" }
+                  - { label: "SEO description", name: "seo_description", widget: "text" }
+                  - { label: "Hero label", name: "hero_label", widget: "string" }
+                  - { label: "Hero title", name: "hero_title", widget: "string" }
+                  - { label: "Hero intro", name: "hero_intro", widget: "text" }
+                  - { label: "CTA principal texto", name: "hero_cta_label", widget: "string" }
+                  - { label: "CTA principal link", name: "hero_cta_link", widget: "string" }
+                  - { label: "CTA secundario texto", name: "hero_secondary_label", widget: "string" }
+                  - { label: "CTA secundario link", name: "hero_secondary_link", widget: "string" }
+                  - label: "Navegación"
+                    name: "nav"
+                    widget: "object"
+                    fields:
+                      - { label: "Sobre mí", name: "about", widget: "string" }
+                      - { label: "Trabajo", name: "work", widget: "string" }
+                      - { label: "Servicios", name: "services", widget: "string" }
+                      - { label: "Contacto", name: "contact", widget: "string" }
+                  - label: "Footer"
+                    name: "footer"
+                    widget: "object"
+                    fields:
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "Instagram", name: "instagram", widget: "string" }
+                      - { label: "Marca", name: "brand", widget: "string" }
+                  - { label: "Texto selector idioma", name: "lang_label", widget: "string", required: false }
+                  - { label: "Texto cambio idioma", name: "lang_switch", widget: "string" }
+              - label: "English"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Name", name: "title", widget: "string" }
+                  - { label: "Tagline", name: "tagline", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "Instagram URL", name: "instagram", widget: "string" }
+                  - { label: "Instagram handle", name: "instagram_handle", widget: "string", required: false }
+                  - { label: "Brand URL", name: "brand", widget: "string" }
+                  - { label: "Brand name", name: "brand_name", widget: "string" }
+                  - { label: "Copyright", name: "copyright", widget: "string" }
+                  - { label: "SEO description", name: "seo_description", widget: "text" }
+                  - { label: "Hero label", name: "hero_label", widget: "string" }
+                  - { label: "Hero title", name: "hero_title", widget: "string" }
+                  - { label: "Hero intro", name: "hero_intro", widget: "text" }
+                  - { label: "Primary CTA text", name: "hero_cta_label", widget: "string" }
+                  - { label: "Primary CTA link", name: "hero_cta_link", widget: "string" }
+                  - { label: "Secondary CTA text", name: "hero_secondary_label", widget: "string" }
+                  - { label: "Secondary CTA link", name: "hero_secondary_link", widget: "string" }
+                  - label: "Navigation"
+                    name: "nav"
+                    widget: "object"
+                    fields:
+                      - { label: "About", name: "about", widget: "string" }
+                      - { label: "Work", name: "work", widget: "string" }
+                      - { label: "Services", name: "services", widget: "string" }
+                      - { label: "Contact", name: "contact", widget: "string" }
+                  - label: "Footer"
+                    name: "footer"
+                    widget: "object"
+                    fields:
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "Instagram", name: "instagram", widget: "string" }
+                      - { label: "Brand", name: "brand", widget: "string" }
+                  - { label: "Language switch text", name: "lang_switch", widget: "string" }
+
+          - label: "Inicio / Home"
             name: "home"
             widget: "object"
             fields:
-              - { label: "Intro kicker", name: "intro_kicker", widget: "string" }
-              - { label: "Texto introducción", name: "intro_text", widget: "text" }
-              - { label: "Título destacados", name: "featured_title", widget: "string" }
-              - { label: "Texto destacados", name: "featured_text", widget: "text" }
-              - label: "Proyectos destacados"
-                name: "featured_projects"
-                widget: "list"
+              - label: "Español"
+                name: "es"
+                widget: "object"
                 fields:
-                  - { label: "Título", name: "title", widget: "string" }
-                  - { label: "Meta", name: "meta", widget: "string" }
-                  - { label: "Descripción", name: "description", widget: "text" }
-          - label: "About"
+                  - { label: "Kicker", name: "intro_kicker", widget: "string" }
+                  - { label: "Texto lateral", name: "intro_text", widget: "text" }
+                  - { label: "Etiqueta bloque", name: "featured_title", widget: "string" }
+                  - { label: "Titular bloque", name: "featured_heading", widget: "string" }
+                  - { label: "Texto bloque", name: "featured_text", widget: "text" }
+                  - label: "Proyectos destacados"
+                    name: "featured_projects"
+                    widget: "list"
+                    fields:
+                      - { label: "Título", name: "title", widget: "string" }
+                      - { label: "Meta", name: "meta", widget: "string" }
+                      - { label: "Descripción", name: "description", widget: "text" }
+              - label: "English"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "intro_kicker", widget: "string" }
+                  - { label: "Side text", name: "intro_text", widget: "text" }
+                  - { label: "Block label", name: "featured_title", widget: "string" }
+                  - { label: "Block heading", name: "featured_heading", widget: "string" }
+                  - { label: "Block text", name: "featured_text", widget: "text" }
+                  - label: "Featured projects"
+                    name: "featured_projects"
+                    widget: "list"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Meta", name: "meta", widget: "string" }
+                      - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Sobre mí / About"
             name: "about"
             widget: "object"
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Lead", name: "lead", widget: "text" }
-              - label: "Párrafos"
-                name: "paragraphs"
-                widget: "list"
-                field: { label: "Párrafo", name: "paragraph", widget: "text" }
-              - { label: "Título highlights", name: "highlight_title", widget: "string" }
-              - label: "Highlights"
-                name: "highlights"
-                widget: "list"
-                field: { label: "Highlight", name: "highlight", widget: "string" }
-          - label: "Work"
+              - label: "Español"
+                name: "es"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Lead", name: "lead", widget: "text" }
+                  - label: "Párrafos"
+                    name: "paragraphs"
+                    widget: "list"
+                    field: { label: "Párrafo", name: "paragraph", widget: "text" }
+                  - { label: "Título destacados", name: "highlight_title", widget: "string" }
+                  - label: "Destacados"
+                    name: "highlights"
+                    widget: "list"
+                    field: { label: "Elemento", name: "highlight", widget: "string" }
+              - label: "English"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Lead", name: "lead", widget: "text" }
+                  - label: "Paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    field: { label: "Paragraph", name: "paragraph", widget: "text" }
+                  - { label: "Highlights title", name: "highlight_title", widget: "string" }
+                  - label: "Highlights"
+                    name: "highlights"
+                    widget: "list"
+                    field: { label: "Item", name: "highlight", widget: "string" }
+
+          - label: "Trabajo / Work"
             name: "work"
             widget: "object"
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Intro", name: "intro", widget: "text" }
-              - label: "Proyectos"
-                name: "projects"
-                widget: "list"
+              - label: "Español"
+                name: "es"
+                widget: "object"
                 fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
                   - { label: "Título", name: "title", widget: "string" }
-                  - { label: "Ubicación", name: "location", widget: "string" }
-                  - { label: "Año", name: "year", widget: "string" }
-                  - { label: "Formato", name: "format", widget: "string" }
                   - { label: "Intro", name: "intro", widget: "text" }
-                  - { label: "Explora", name: "explores", widget: "text" }
-                  - { label: "Enfoque", name: "approach", widget: "text" }
-                  - { label: "Contexto", name: "context", widget: "text" }
-          - label: "Services"
+                  - label: "Etiquetas"
+                    name: "labels"
+                    widget: "object"
+                    fields:
+                      - { label: "Explora", name: "explores", widget: "string" }
+                      - { label: "Enfoque", name: "approach", widget: "string" }
+                      - { label: "Contexto", name: "context", widget: "string" }
+                  - label: "Proyectos"
+                    name: "projects"
+                    widget: "list"
+                    fields:
+                      - { label: "Título", name: "title", widget: "string" }
+                      - { label: "Lugar", name: "location", widget: "string" }
+                      - { label: "Año", name: "year", widget: "string" }
+                      - { label: "Formato", name: "format", widget: "string" }
+                      - { label: "Intro", name: "intro", widget: "text" }
+                      - { label: "Explora", name: "explores", widget: "text" }
+                      - { label: "Enfoque", name: "approach", widget: "text" }
+                      - { label: "Contexto", name: "context", widget: "text" }
+              - label: "English"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Intro", name: "intro", widget: "text" }
+                  - label: "Labels"
+                    name: "labels"
+                    widget: "object"
+                    fields:
+                      - { label: "Explores", name: "explores", widget: "string" }
+                      - { label: "Approach", name: "approach", widget: "string" }
+                      - { label: "Context", name: "context", widget: "string" }
+                  - label: "Projects"
+                    name: "projects"
+                    widget: "list"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Location", name: "location", widget: "string" }
+                      - { label: "Year", name: "year", widget: "string" }
+                      - { label: "Format", name: "format", widget: "string" }
+                      - { label: "Intro", name: "intro", widget: "text" }
+                      - { label: "Explores", name: "explores", widget: "text" }
+                      - { label: "Approach", name: "approach", widget: "text" }
+                      - { label: "Context", name: "context", widget: "text" }
+
+          - label: "Servicios / Services"
             name: "services"
             widget: "object"
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Intro", name: "intro", widget: "text" }
-              - label: "Servicios"
-                name: "items"
-                widget: "list"
+              - label: "Español"
+                name: "es"
+                widget: "object"
                 fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
                   - { label: "Título", name: "title", widget: "string" }
-                  - { label: "Texto", name: "text", widget: "text" }
-          - label: "Philosophy"
-            name: "philosophy"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - label: "Párrafos"
-                name: "paragraphs"
-                widget: "list"
-                field: { label: "Párrafo", name: "paragraph", widget: "text" }
-          - label: "Contact"
+                  - { label: "Intro", name: "intro", widget: "text" }
+                  - { label: "Meta destacado", name: "feature_meta", widget: "string" }
+                  - label: "Servicios"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Título", name: "title", widget: "string" }
+                      - { label: "Texto", name: "text", widget: "text" }
+              - label: "English"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Intro", name: "intro", widget: "text" }
+                  - { label: "Feature meta", name: "feature_meta", widget: "string" }
+                  - label: "Services"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Text", name: "text", widget: "text" }
+
+          - label: "Contacto / Contact"
             name: "contact"
             widget: "object"
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Título", name: "title", widget: "string" }
-              - { label: "Intro", name: "intro", widget: "text" }
-              - { label: "Nota", name: "note", widget: "text" }
-              - { label: "Formspree endpoint", name: "formspree_endpoint", widget: "string" }
-              - label: "Datos de contacto"
-                name: "contact_items"
-                widget: "list"
+              - label: "Español"
+                name: "es"
+                widget: "object"
                 fields:
-                  - { label: "Etiqueta", name: "label", widget: "string" }
-                  - { label: "Valor", name: "value", widget: "string" }
-                  - label: "Tipo"
-                    name: "type"
-                    widget: "select"
-                    options: ["email", "url", "text"]
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
+                  - { label: "Título", name: "title", widget: "string" }
+                  - { label: "Intro", name: "intro", widget: "text" }
+                  - { label: "Nota", name: "note", widget: "text" }
+                  - { label: "Endpoint Formspree", name: "formspree_endpoint", widget: "string" }
+                  - label: "Elementos de contacto"
+                    name: "contact_items"
+                    widget: "list"
+                    fields:
+                      - { label: "Etiqueta", name: "label", widget: "string" }
+                      - { label: "Valor", name: "value", widget: "string" }
+                      - label: "Tipo"
+                        name: "type"
+                        widget: "select"
+                        options: ["text", "email", "url"]
+                  - label: "Formulario"
+                    name: "form"
+                    widget: "object"
+                    fields:
+                      - { label: "Nombre", name: "name", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "Proyecto", name: "project", widget: "string" }
+                      - { label: "Mensaje", name: "message", widget: "string" }
+                      - { label: "Botón enviar", name: "send", widget: "string" }
+                      - label: "Opciones"
+                        name: "options"
+                        widget: "list"
+                        field: { label: "Opción", name: "option", widget: "string" }
+              - label: "English"
+                name: "en"
+                widget: "object"
+                fields:
+                  - { label: "Kicker", name: "eyebrow", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Intro", name: "intro", widget: "text" }
+                  - { label: "Note", name: "note", widget: "text" }
+                  - { label: "Formspree endpoint", name: "formspree_endpoint", widget: "string" }
+                  - label: "Contact items"
+                    name: "contact_items"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Value", name: "value", widget: "string" }
+                      - label: "Type"
+                        name: "type"
+                        widget: "select"
+                        options: ["text", "email", "url"]
+                  - label: "Form"
+                    name: "form"
+                    widget: "object"
+                    fields:
+                      - { label: "Name", name: "name", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "Project", name: "project", widget: "string" }
+                      - { label: "Message", name: "message", widget: "string" }
+                      - { label: "Send button", name: "send", widget: "string" }
+                      - label: "Options"
+                        name: "options"
+                        widget: "list"
+                        field: { label: "Option", name: "option", widget: "string" }
