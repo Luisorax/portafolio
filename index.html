@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Pinero — Fotógrafo Documental & Cineasta</title>
+  <meta name="description" content="Fotógrafo documental y cineasta de viajes. Trabajo basado en territorio, encuentro, y la frágil línea entre paisaje y vida humana. Fundador de Tierra Ignota.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F5F1EA;
+      --bg-off: #EDE8DF;
+      --dark: #1A1612;
+      --deep: #2B241C;
+      --mid: #696057;
+      --muted: #9B9188;
+      --bone: #D5CEC1;
+      --cinema: #0F0D0B;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', system-ui, sans-serif;
+      --w: 1280px;
+      --gx: clamp(20px, 5vw, 60px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.06; }
+    p { font-size: 0.9rem; color: var(--mid); }
+
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 var(--gx); }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(245, 241, 234, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--bone);
+      padding: 20px var(--gx);
+    }
+
+    .nav-wrap {
+      max-width: var(--w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      color: var(--dark);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--dark);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1612 0%, #2b241c 100%);
+      color: #EDE8DF;
+      margin-top: 60px;
+      min-height: 500px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      margin-bottom: 20px;
+      color: #F5F1EA;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-content .subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(230, 220, 205, 0.7);
+      margin-bottom: 40px;
+    }
+
+    .hero-content .tagline {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 300;
+      font-style: italic;
+      color: #D5CEC1;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      line-height: 1.4;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid #D5CEC1;
+      color: #F5F1EA;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: all 0.4s;
+    }
+
+    .cta-button:hover {
+      background: #F5F1EA;
+      color: #1a1612;
+    }
+
+    /* ===== CONTENT SECTIONS ===== */
+    .section {
+      padding: 80px var(--gx);
+      margin: 0 auto;
+      max-width: var(--w);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-family: var(--serif);
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--bg);
+      padding: 40px var(--gx);
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: var(--bg);
+      border-bottom: 1px solid var(--bg);
+      margin: 0 15px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { gap: 15px; }
+      .hero-content h1 { font-size: 2rem; }
+      .hero { margin-top: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN (igual en todas las páginas) -->
+  <nav>
+    <div class="nav-wrap">
+      <div class="nav-logo">LUIS PINERO</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="work.html">Trabajo</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="philosophy.html">Filosofía</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO / INICIO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="subtitle">Fotógrafo Documental · Cineasta de Viajes</div>
+      <h1>Luis<br><span style="font-weight: 300; opacity: 0.8;">Pinero</span></h1>
+      <p class="tagline">Trabajo basado en territorio, encuentro, y la frágil línea entre paisaje y vida humana.</p>
+      <a href="about.html" class="cta-button">Conocer Más</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (igual en todas las páginas) -->
+  <footer>
+    <p>© 2026 Luis Pinero. Todos los derechos reservados.</p>
+    <p>
+      <a href="mailto:info@luispineroalvarez.com">Email</a>
+      <a href="https://instagram.com/on.ecstasy" target="_blank">Instagram</a>
+      <a href="https://tierraignota.com" target="_blank">Tierra Ignota</a>
+    </p>
+  </footer>
+
+</body>
+</html>

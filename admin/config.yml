@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: TU_USUARIO_GITHUB/TU_NOMBRE_REPO
+  branch: main
+  site_domain: netlify.app
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    folder: "."
+    create: false
+    slug: "{{slug}}"
+    files:
+      - file: "index.html"
+        label: "Portada (Home)"
+        name: "home"
+        fields:
+          - {label: "Hero Title", name: "hero-title", widget: "string", hint: "Título principal"}
+          - {label: "Hero Subtitle", name: "hero-subtitle", widget: "text", hint: "Subtítulo"}
+
+      - file: "about.html"
+        label: "Acerca de"
+        name: "about"
+        fields:
+          - {label: "Tu Nombre", name: "name", widget: "string"}
+          - {label: "Biografía", name: "bio", widget: "text"}
+          - {label: "Foto de Perfil", name: "portrait", widget: "image"}
+
+      - file: "work.html"
+        label: "Trabajos"
+        name: "work"
+        fields:
+          - {label: "Título Sección", name: "section-title", widget: "string"}
+          - {label: "Descripción", name: "description", widget: "text"}
+          - {label: "Proyecto 1", name: "project-1-title", widget: "string"}
+          - {label: "Foto Proyecto 1", name: "project-1-image", widget: "image"}
+          - {label: "Proyecto 2", name: "project-2-title", widget: "string"}
+          - {label: "Foto Proyecto 2", name: "project-2-image", widget: "image"}
+          - {label: "Proyecto 3", name: "project-3-title", widget: "string"}
+          - {label: "Foto Proyecto 3", name: "project-3-image", widget: "image"}
+
+      - file: "services.html"
+        label: "Servicios"
+        name: "services"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Descripción General", name: "intro", widget: "text"}
+          - {label: "Servicio 1", name: "service-1", widget: "text"}
+          - {label: "Servicio 2", name: "service-2", widget: "text"}
+          - {label: "Servicio 3", name: "service-3", widget: "text"}
+
+      - file: "philosophy.html"
+        label: "Filosofía"
+        name: "philosophy"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Contenido", name: "content", widget: "markdown"}
+
+      - file: "contact.html"
+        label: "Contacto"
+        name: "contact"
+        fields:
+          - {label: "Email de Contacto", name: "email", widget: "string"}
+          - {label: "Mensaje de Bienvenida", name: "welcome-message", widget: "text"}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajo — Luis Pinero</title>
+  <meta name="description" content="Proyectos de fotografía documental y cine de viajes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F5F1EA;
+      --bg-off: #EDE8DF;
+      --dark: #1A1612;
+      --deep: #2B241C;
+      --mid: #696057;
+      --muted: #9B9188;
+      --bone: #D5CEC1;
+      --cinema: #0F0D0B;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', system-ui, sans-serif;
+      --w: 1280px;
+      --gx: clamp(20px, 5vw, 60px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.06; }
+    p { font-size: 0.9rem; color: var(--mid); margin-bottom: 15px; }
+
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 var(--gx); }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(245, 241, 234, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--bone);
+      padding: 20px var(--gx);
+    }
+
+    .nav-wrap {
+      max-width: var(--w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--dark);
+    }
+
+    /* CONTENT */
+    .work-section {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .section-intro {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--dark);
+      max-width: 700px;
+      margin-bottom: 60px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 80px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .project:nth-child(even) { direction: rtl; }
+    .project:nth-child(even) > * { direction: ltr; }
+
+    .project-image {
+      background: linear-gradient(135deg, #696057 0%, #9B9188 100%);
+      aspect-ratio: 4/3;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .project-meta {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .project-content p {
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .project-content em {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--deep);
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--bg);
+      padding: 40px var(--gx);
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: var(--bg);
+      border-bottom: 1px solid var(--bg);
+      margin: 0 15px;
+    }
+
+    @media (max-width: 768px) {
+      .project { grid-template-columns: 1fr; }
+      .project:nth-child(even) { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrap">
+      <div class="nav-logo">LUIS PINERO</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="work.html" class="active">Trabajo</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="philosophy.html">Filosofía</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="work-section">
+    <div class="wrap">
+
+      <p class="section-intro">Selección de proyectos basados en viajes, territorio, y encuentro cultural. Cada proyecto es una exploración de lugar, tiempo, y la relación entre personas y paisaje.</p>
+
+      <div class="projects-grid">
+
+        <!-- PROYECTO 1 -->
+        <div class="project">
+          <div class="project-image">
+            <!-- Reemplaza con tu imagen: <img src="proyecto1.jpg" alt="Título"> -->
+          </div>
+          <div class="project-content">
+            <h3>Mongolia<br>Nómadas</h3>
+            <p class="project-meta">Mongolia — 2024 · Fotografía Documental</p>
+            <p><em>Exploración visual de la vida nómada en las estepas mongolas. Trabajo enfocado en la relación entre personas, caballos, y territorio.</em></p>
+            <p>El proyecto documenta la cotidianidad de familias pastoras, con énfasis en atmósfera, luz natural, y los ritmos de la vida de campo. Acceso requirió construcción de confianza y tiempo para observación profunda.</p>
+          </div>
+        </div>
+
+        <!-- PROYECTO 2 -->
+        <div class="project">
+          <div class="project-image">
+            <!-- Reemplaza con tu imagen: <img src="proyecto2.jpg" alt="Título"> -->
+          </div>
+          <div class="project-content">
+            <h3>Etiopía<br>Comunidades</h3>
+            <p class="project-meta">Etiopía — 2023 · Fotografía Documental</p>
+            <p><em>Trabajo en zonas rurales del sur de Etiopía, donde las tradiciones y ritmos ancestrales siguen estructurando la vida diaria.</em></p>
+            <p>Documentación de ceremonias, trabajo agrario, y dinámicas familiares. El trabajo evita la exoticización a favor de la comprensión profunda del contexto cultural local.</p>
+          </div>
+        </div>
+
+        <!-- PROYECTO 3 -->
+        <div class="project">
+          <div class="project-image">
+            <!-- Reemplaza con tu imagen: <img src="proyecto3.jpg" alt="Título"> -->
+          </div>
+          <div class="project-content">
+            <h3>Omán<br>Paisaje y Tiempo</h3>
+            <p class="project-meta">Omán — 2022 · Fotografía Documental</p>
+            <p><em>Exploración de paisajes desérticos y las relaciones humanas dentro de ellos. Trabajo centrado en atmósfera y geometría natural.</em></p>
+            <p>Largo tiempo en el campo permitió acceso a momentos de quietud y luz. El resultado es un cuerpo de trabajo que prioriza sensación sobre documentación literal.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Luis Pinero. Todos los derechos reservados.</p>
+    <p>
+      <a href="mailto:info@luispineroalvarez.com">Email</a>
+      <a href="https://instagram.com/on.ecstasy" target="_blank">Instagram</a>
+      <a href="https://tierraignota.com" target="_blank">Tierra Ignota</a>
+    </p>
+  </footer>
+
+</body>
+</html>

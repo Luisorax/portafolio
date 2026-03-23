@@ -1,0 +1,11 @@
+[build]
+  command = "echo 'Building...'"
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  NETLIFY_EMAILS = "info@luispineroalvarez.com"

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Luis Pinero</title>
+  <meta name="description" content="Contacta conmigo para encargos, colaboraciones, y expediciones.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F5F1EA;
+      --dark: #1A1612;
+      --mid: #696057;
+      --muted: #9B9188;
+      --bone: #D5CEC1;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', system-ui, sans-serif;
+      --w: 1280px;
+      --gx: clamp(20px, 5vw, 60px);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+    p { font-size: 0.9rem; color: var(--mid); }
+
+    .wrap { max-width: var(--w); margin: 0 auto; padding: 0 var(--gx); }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(245, 241, 234, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--bone);
+      padding: 20px var(--gx);
+    }
+
+    .nav-wrap {
+      max-width: var(--w);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--dark);
+    }
+
+    /* CONTENT */
+    .contact-section {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-info p {
+      margin-bottom: 25px;
+      line-height: 1.8;
+    }
+
+    .contact-methods {
+      margin-top: 50px;
+    }
+
+    .contact-method {
+      margin-bottom: 30px;
+    }
+
+    .contact-method h3 {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .contact-method a, .contact-method p {
+      font-size: 1rem;
+      color: var(--dark);
+    }
+
+    .contact-method a {
+      border-bottom: 1px solid var(--bone);
+      transition: border-color 0.3s;
+    }
+
+    .contact-method a:hover {
+      border-color: var(--dark);
+    }
+
+    /* FORM */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--bone);
+      padding: 10px 0;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-bottom-color: var(--dark);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .form-group select option {
+      color: var(--dark);
+    }
+
+    .form-submit {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      background: var(--dark);
+      color: var(--bg);
+      border: none;
+      padding: 12px 40px;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    button:hover {
+      background: var(--bg);
+      color: var(--dark);
+      border: 1px solid var(--dark);
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--bg);
+      padding: 40px var(--gx);
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: var(--bg);
+      border-bottom: 1px solid var(--bg);
+      margin: 0 15px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrap">
+      <div class="nav-logo">LUIS PINERO</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="work.html">Trabajo</a></li>
+        <li><a href="services.html">Servicios</a></li>
+        <li><a href="philosophy.html">Filosofía</a></li>
+        <li><a href="contact.html" class="active">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contact-info">
+          <h2>Conversemos</h2>
+          <p>Estoy abierto a encargos, colaboraciones, expediciones, y proyectos editoriales que valoren profundidad, intención, y una relación significativa con el lugar.</p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3>Email</h3>
+              <a href="mailto:info@luispineroalvarez.com">info@luispineroalvarez.com</a>
+            </div>
+
+            <div class="contact-method">
+              <h3>Instagram</h3>
+              <a href="https://instagram.com/on.ecstasy" target="_blank">@on.ecstasy</a>
+            </div>
+
+            <div class="contact-method">
+              <h3>Expediciones</h3>
+              <a href="https://tierraignota.com" target="_blank">Tierra Ignota</a>
+            </div>
+
+            <div class="contact-method">
+              <h3>Ubicación</h3>
+              <p>Basado entre viajes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="project">Tipo de proyecto</label>
+            <select id="project" name="project" required>
+              <option value="">Selecciona una opción</option>
+              <option value="commission">Encargo fotográfico</option>
+              <option value="film">Proyecto de cine</option>
+              <option value="editorial">Colaboración editorial</option>
+              <option value="expedition">Expedición</option>
+              <option value="consulting">Consultoría</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Luis Pinero. Todos los derechos reservados.</p>
+    <p>
+      <a href="mailto:info@luispineroalvarez.com">Email</a>
+      <a href="https://instagram.com/on.ecstasy" target="_blank">Instagram</a>
+      <a href="https://tierraignota.com" target="_blank">Tierra Ignota</a>
+    </p>
+  </footer>
+
+</body>
+</html>
