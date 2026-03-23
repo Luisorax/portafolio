@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Luisorax/portafolio
   branch: main
-  site_domain: mellifluous-eclair-5d3bf1.netlify.app
+  site_domain: luispineroalvarez.com
 
 media_folder: "images"
 public_folder: "/images"
