@@ -1,8 +1,8 @@
 {
   "site": {
     "es": {
-      "title": "Luis Piñero Álvarez",
-      "tagline": "Fotografía documental · Cinematografía · Viaje",
+      "title": "LUIS PIÑERO ÁLVAREZ",
+      "tagline": "",
       "email": "info@luispineroalvarez.com",
       "instagram": "https://instagram.com/on.ecstasy",
       "instagram_handle": "@on.ecstasy",
@@ -11,7 +11,7 @@
       "copyright": "© Luis Piñero Álvarez",
       "seo_description": "Portfolio de Luis Piñero Álvarez, fotógrafo documental de viaje y cinematógrafo.",
       "hero_label": "Fotografía documental · Cinematografía · Viaje",
-      "hero_title": "Luis Piñero Álvarez",
+      "hero_title": "LUIS PIÑERO ÁLVAREZ",
       "hero_intro": "Imágenes y películas nacidas del territorio, la experiencia y la presencia humana.",
       "hero_cta_label": "Ver trabajo",
       "hero_cta_link": "/trabajo",
@@ -32,8 +32,8 @@
       "lang_switch": "English"
     },
     "en": {
-      "title": "Luis Piñero Álvarez",
-      "tagline": "Documentary Photography · Cinematography · Travel",
+      "title": "LUIS PIÑERO ÁLVAREZ",
+      "tagline": "",
       "email": "info@luispineroalvarez.com",
       "instagram": "https://instagram.com/on.ecstasy",
       "instagram_handle": "@on.ecstasy",
@@ -42,7 +42,7 @@
       "copyright": "© Luis Piñero Álvarez",
       "seo_description": "Portfolio of Luis Piñero Álvarez, travel documentary photographer and cinematographer.",
       "hero_label": "Documentary Photography · Cinematography · Travel",
-      "hero_title": "Luis Piñero Álvarez",
+      "hero_title": "LUIS PIÑERO ÁLVAREZ",
       "hero_intro": "Images and films shaped by territory, lived experience, and human presence.",
       "hero_cta_label": "View work",
       "hero_cta_link": "/en/work",
@@ -65,50 +65,50 @@
   },
   "home": {
     "es": {
-      "intro_kicker": "Mirada documental",
-      "intro_text": "Trabajo entre fotografía y cine documental, con un interés claro por el territorio, la cultura, la identidad y la relación entre las personas y el lugar que habitan.",
-      "featured_title": "Selección",
-      "featured_heading": "Menos ruido. Más presencia. Mejor lectura.",
-      "featured_text": "Una portada más sobria y una estructura editorial pensada para que la mirada, el criterio y el trabajo respiren mejor.",
+      "intro_kicker": "Disponibilidad 2026 / 2027",
+      "intro_text": "Me involucro en proyectos especiales, serios y bien pensados: documentales, encargos editoriales, campañas con fondo y narrativas de viaje que exijan sensibilidad, criterio y capacidad real sobre el terreno.",
+      "featured_title": "Selección visual",
+      "featured_heading": "Una portada pensada para que entren más imágenes y hablen más alto.",
+      "featured_text": "La web se reordena para darle más protagonismo a la fotografía y al cine, con bloques amplios, respiración editorial y espacio real para imágenes verticales, horizontales y secuencias.",
       "featured_projects": [
         {
           "title": "Karachi",
           "meta": "Pakistán · Fotografía / cine",
-          "description": "Una aproximación visual a una ciudad de capas, tensión, calle y energía humana."
+          "description": "Capas urbanas, energía callejera y una lectura visual que evita el exotismo fácil."
         },
         {
           "title": "Mohana",
           "meta": "Sindh · Documental",
-          "description": "Una historia en torno a una comunidad anfibia, su memoria y su vínculo con el agua."
+          "description": "Una historia de agua, memoria y adaptación, contada desde la proximidad y el tiempo."
         },
         {
           "title": "Tierra Ignota",
           "meta": "Expediciones · Dirección creativa",
-          "description": "Narrativa visual y construcción editorial para una marca de viajes de autor."
+          "description": "Narrativa visual, criterio editorial y una mirada autoral aplicada a viajes con densidad humana."
         }
       ]
     },
     "en": {
-      "intro_kicker": "Documentary eye",
-      "intro_text": "I work between photography and documentary cinema, with a clear interest in territory, culture, identity, and the relationship between people and the places they inhabit.",
-      "featured_title": "Selected",
-      "featured_heading": "Less noise. More presence. Better rhythm.",
-      "featured_text": "A calmer opening and an editorial structure designed to give the work more air, clarity, and intention.",
+      "intro_kicker": "Availability 2026 / 2027",
+      "intro_text": "I tend to commit to special, serious, well-considered projects: documentaries, editorial commissions, campaigns with substance, and travel narratives that ask for sensitivity, judgment, and real field capability.",
+      "featured_title": "Visual selection",
+      "featured_heading": "A homepage rebuilt to let the images carry more of the weight.",
+      "featured_text": "The site is now structured to give photography and film more room to breathe, with larger frames, clearer rhythm, and proper space for verticals, horizontals, and image sequences.",
       "featured_projects": [
         {
           "title": "Karachi",
           "meta": "Pakistan · Photography / film",
-          "description": "A visual approach to a layered city shaped by tension, street life, and human energy."
+          "description": "Urban density, street energy, and a visual approach that avoids easy exoticism."
         },
         {
           "title": "Mohana",
           "meta": "Sindh · Documentary",
-          "description": "A story centered on an amphibious community, its memory, and its relationship with water."
+          "description": "A story of water, memory, and adaptation told through closeness and time."
         },
         {
           "title": "Tierra Ignota",
           "meta": "Expeditions · Creative direction",
-          "description": "Visual narrative and editorial world-building for an authored travel brand."
+          "description": "Visual narrative, editorial judgment, and an authored eye applied to meaningful travel."
         }
       ]
     }
@@ -116,46 +116,46 @@
   "about": {
     "es": {
       "eyebrow": "Sobre mí",
-      "title": "Documentar un lugar es también aprender a estar en él.",
-      "lead": "Fotografía documental, cine y narrativa de viaje con una mirada atenta al territorio, a la cultura y a la presencia humana.",
+      "title": "Trabajo desde la observación, el contexto y una relación seria con el lugar.",
+      "lead": "Fotografía documental y cinematografía para proyectos que piden presencia, sensibilidad y una mirada con criterio.",
       "paragraphs": [
-        "Soy Luis Piñero Álvarez, fotógrafo documental de viaje y cinematógrafo. Mi trabajo se mueve entre la imagen fija y el movimiento, y nace del interés por lugares donde paisaje, cultura y experiencia humana siguen profundamente conectados.",
-        "Me interesan las imágenes que no solo describen, sino que transmiten atmósfera, tensión, intimidad y contexto. No busco únicamente cómo se ve un lugar, sino qué se siente al estar allí.",
-        "Además de proyectos documentales y encargos, desarrollo expediciones a través de Tierra Ignota, una plataforma centrada en viajes de inmersión a entornos remotos y culturalmente significativos. Esa experiencia ha moldeado mi forma de trabajar: con paciencia, adaptabilidad y respeto.",
-        "Trabajo desde una idea simple: una buena imagen no se impone sobre un lugar; aprende primero a mirarlo."
+        "Soy Luis Piñero Álvarez, fotógrafo documental de viaje y cinematógrafo. Mi trabajo se mueve entre la imagen fija y el movimiento, siempre con una atención fuerte al territorio, la cultura y la manera en que las personas habitan un lugar.",
+        "Me interesan los proyectos que no se quedan en la superficie: historias con densidad, lugares con memoria, contextos que exigen tiempo y una forma de mirar que no simplifique lo que tiene delante.",
+        "Además de encargos y trabajos documentales, desarrollo expediciones a través de Tierra Ignota. Esa experiencia me ha dado algo que valoro mucho: saber moverme en entornos complejos sin perder ni la sensibilidad visual ni el respeto por el contexto.",
+        "Suelo implicarme especialmente en proyectos con ambición real, una base humana clara y voluntad de hacer las cosas bien. La agenda está abierta para colaboraciones seleccionadas en 2026 y 2027."
       ],
-      "highlight_title": "Claves",
+      "highlight_title": "En qué encajo mejor",
       "highlights": [
-        "Trabajo entre fotografía y cinematografía.",
-        "Experiencia en contextos remotos y culturalmente sensibles.",
-        "Narrativa visual con enfoque editorial y documental.",
-        "Fundador de Tierra Ignota."
+        "Proyectos documentales, editoriales y cinematográficos con fondo.",
+        "Trabajos en viaje, expedición o contextos culturalmente sensibles.",
+        "Marcas, medios e instituciones que buscan algo más serio que contenido rápido.",
+        "Disponibilidad abierta para proyectos seleccionados en 2026 / 2027."
       ]
     },
     "en": {
       "eyebrow": "About",
-      "title": "To document a place is also to learn how to stand within it.",
-      "lead": "Documentary photography, cinematography, and travel storytelling shaped by territory, culture, and human presence.",
+      "title": "I work through observation, context, and a serious relationship with place.",
+      "lead": "Documentary photography and cinematography for projects that ask for presence, sensitivity, and visual judgment.",
       "paragraphs": [
-        "I am Luis Piñero Álvarez, a travel documentary photographer and cinematographer. My work moves between still and moving image, rooted in places where landscape, culture, and human experience remain deeply connected.",
-        "I am drawn to images that do more than describe — images that carry atmosphere, tension, intimacy, and context. I am interested not only in how a place looks, but in what it feels like to be there.",
-        "Alongside documentary projects and commissioned work, I also develop expeditions through Tierra Ignota, a platform focused on immersive journeys to remote and culturally significant environments. That experience has shaped the way I work: with patience, adaptability, and respect.",
-        "I work from a simple idea: a meaningful image does not impose itself on a place; it first learns how to look at it."
+        "I am Luis Piñero Álvarez, a travel documentary photographer and cinematographer. My work moves between still and moving image, always anchored in territory, culture, and the way people inhabit a place.",
+        "I am drawn to projects that go beyond surface: stories with density, places with memory, and contexts that demand time and a way of looking that does not flatten what is in front of it.",
+        "Alongside commissions and documentary work, I develop expeditions through Tierra Ignota. That experience has given me something I value deeply: the ability to work in complex environments without losing either visual sensitivity or respect for context.",
+        "I tend to commit most strongly to projects with real ambition, a clear human core, and the will to do things properly. My schedule is open for selected collaborations in 2026 and 2027."
       ],
-      "highlight_title": "Focus",
+      "highlight_title": "Best fit",
       "highlights": [
-        "Work across photography and cinematography.",
-        "Experience in remote and culturally sensitive contexts.",
-        "Editorial and documentary visual storytelling.",
-        "Founder of Tierra Ignota."
+        "Documentary, editorial, and cinematic projects with substance.",
+        "Work shaped by travel, expeditions, or culturally sensitive contexts.",
+        "Brands, media, and institutions looking for something more serious than fast content.",
+        "Open availability for selected projects in 2026 / 2027."
       ]
     }
   },
   "work": {
     "es": {
       "eyebrow": "Trabajo",
-      "title": "Historias construidas desde el terreno.",
-      "intro": "Una selección de trabajos documentales y narrativas visuales ligadas al viaje, la cultura y el contexto.",
+      "title": "Trabajo con estructura, aire y mucho más espacio para imagen.",
+      "intro": "Una selección pensada como capítulos visuales: menos lista, más lectura; menos bloque, más presencia.",
       "labels": {
         "explores": "Explora",
         "approach": "Enfoque",
@@ -170,7 +170,8 @@
           "intro": "Un acercamiento visual a una ciudad eléctrica, contradictoria y llena de capas humanas.",
           "explores": "Explora la tensión entre identidad, calle, energía cotidiana y complejidad urbana.",
           "approach": "Una mirada inmersiva y cercana, construida desde la observación, el movimiento y la atmósfera.",
-          "context": "Trabajo desarrollado entre caos, densidad y fricción visual, buscando una presencia honesta más que una postal."
+          "context": "Trabajo desarrollado entre caos, densidad y fricción visual, buscando una presencia honesta más que una postal.",
+          "image_hint": "Placeholder vertical / escena principal"
         },
         {
           "title": "Mohana",
@@ -180,7 +181,8 @@
           "intro": "Una historia sobre una comunidad anfibia cuya vida sigue íntimamente ligada al agua.",
           "explores": "Explora identidad, adaptación y fragilidad dentro de una forma de vida profundamente unida al territorio.",
           "approach": "Ritmo contemplativo, cámara cercana y atención a los detalles que sostienen una cultura.",
-          "context": "Trabajo construido desde el tiempo compartido, el respeto y la necesidad de no convertir la diferencia en espectáculo."
+          "context": "Trabajo construido desde el tiempo compartido, el respeto y la necesidad de no convertir la diferencia en espectáculo.",
+          "image_hint": "Placeholder horizontal / secuencia de ciudad"
         },
         {
           "title": "Tierra Ignota",
@@ -190,14 +192,17 @@
           "intro": "Una plataforma de expediciones de autor a lugares remotos y culturalmente significativos.",
           "explores": "Explora otra forma de viajar: más atenta, más exigente y más conectada con la experiencia humana y el contexto local.",
           "approach": "Narrativa visual, criterio editorial y construcción de marca desde la autenticidad y el deseo de descubrimiento.",
-          "context": "Una mezcla de sensibilidad documental, dirección creativa y trabajo real sobre el terreno."
+          "context": "Una mezcla de sensibilidad documental, dirección creativa y trabajo real sobre el terreno.",
+          "image_hint": "Placeholder editorial / retrato y contexto"
         }
-      ]
+      ],
+      "closing_title": "Proyectos especiales y colaboraciones",
+      "closing_text": "Me interesa involucrarme en trabajos con intención real: piezas documentales, proyectos editoriales, campañas con profundidad, relatos de viaje bien pensados y colaboraciones que necesiten una mirada sólida, no solo ejecución. Agenda abierta para proyectos seleccionados en 2026 y 2027."
     },
     "en": {
       "eyebrow": "Work",
-      "title": "Stories built from the field.",
-      "intro": "A selection of documentary work and visual narratives shaped by travel, culture, and context.",
+      "title": "Work with stronger structure, more air, and much more room for image.",
+      "intro": "A selection designed as visual chapters: less list, more reading; less block, more presence.",
       "labels": {
         "explores": "Explores",
         "approach": "Approach",
@@ -212,7 +217,8 @@
           "intro": "A visual approach to an electric, contradictory city layered with human presence.",
           "explores": "It explores the tension between identity, street life, daily energy, and urban complexity.",
           "approach": "An immersive and close visual language built through observation, movement, and atmosphere.",
-          "context": "Made within chaos, density, and visual friction, aiming for presence rather than postcard imagery."
+          "context": "Made within chaos, density, and visual friction, aiming for presence rather than postcard imagery.",
+          "image_hint": "Vertical placeholder / key scene"
         },
         {
           "title": "Mohana",
@@ -222,7 +228,8 @@
           "intro": "A story centered on an amphibious community whose life remains deeply tied to water.",
           "explores": "It explores identity, adaptation, and fragility within a way of life profoundly bound to territory.",
           "approach": "A contemplative rhythm, close camera work, and attention to the details that sustain a culture.",
-          "context": "Built through shared time, respect, and a refusal to turn difference into spectacle."
+          "context": "Built through shared time, respect, and a refusal to turn difference into spectacle.",
+          "image_hint": "Horizontal placeholder / city sequence"
         },
         {
           "title": "Tierra Ignota",
@@ -232,17 +239,20 @@
           "intro": "An authored expedition platform focused on remote and culturally significant places.",
           "explores": "It explores another way of travelling: more attentive, more demanding, and more connected to human experience and local context.",
           "approach": "Visual narrative, editorial judgment, and brand-building grounded in authenticity and discovery.",
-          "context": "A blend of documentary sensitivity, creative direction, and real field experience."
+          "context": "A blend of documentary sensitivity, creative direction, and real field experience.",
+          "image_hint": "Editorial placeholder / portrait and context"
         }
-      ]
+      ],
+      "closing_title": "Special projects and selected collaborations",
+      "closing_text": "I am most interested in work with real intention: documentary pieces, editorial projects, campaigns with depth, well-considered travel narratives, and collaborations that need a strong point of view, not just execution. Schedule open for selected projects in 2026 and 2027."
     }
   },
   "services": {
     "es": {
       "eyebrow": "Servicios",
-      "title": "Servicios y colaboraciones con fondo, criterio y mirada.",
-      "intro": "Colaboro con marcas, medios, instituciones y proyectos que entienden que una imagen valiosa no es solo estética: también es contexto, presencia y dirección.",
-      "feature_meta": "Colaboraciones selectivas",
+      "title": "Servicios y colaboraciones para proyectos con peso, imagen y criterio.",
+      "intro": "Trabajo con marcas, medios, instituciones y proyectos que necesitan una mirada sólida y una ejecución seria: no solo piezas bonitas, sino imágenes con intención, contexto y forma.",
+      "feature_meta": "Proyectos seleccionados",
       "items": [
         {
           "title": "Fotografía documental",
@@ -264,13 +274,15 @@
           "title": "Dirección creativa",
           "text": "Desarrollo de tono visual, estructura narrativa y decisiones de lenguaje para proyectos conectados con territorio, cultura y experiencia."
         }
-      ]
+      ],
+      "availability_title": "Disponibilidad",
+      "availability_text": "Estoy abierto a proyectos especiales y colaboraciones seleccionadas en 2026 y 2027: documentales, editoriales, campañas con fondo, narrativas de viaje y trabajos en terreno que necesiten una mirada autoral y capacidad real de producción."
     },
     "en": {
       "eyebrow": "Services",
-      "title": "Services and collaborations shaped by depth and visual judgment.",
-      "intro": "I collaborate with brands, media, institutions, and projects that understand a strong image is not only aesthetic — it also carries context, presence, and direction.",
-      "feature_meta": "Selective collaborations",
+      "title": "Services and collaborations for projects with weight, image, and judgment.",
+      "intro": "I work with brands, media, institutions, and projects that need a serious visual approach and dependable execution: not simply attractive images, but work with intention, context, and form.",
+      "feature_meta": "Selected projects",
       "items": [
         {
           "title": "Documentary photography",
@@ -292,15 +304,17 @@
           "title": "Creative direction",
           "text": "Visual tone, narrative structure, and language decisions for projects connected to territory, culture, and lived experience."
         }
-      ]
+      ],
+      "availability_title": "Availability",
+      "availability_text": "I am open to special projects and selected collaborations in 2026 and 2027: documentaries, editorial work, campaigns with substance, travel narratives, and field-based productions that need an authored eye and real production capability."
     }
   },
   "contact": {
     "es": {
       "eyebrow": "Contacto",
-      "title": "Hablemos de un proyecto que merezca la pena.",
-      "intro": "Trabajo con encargos, colaboraciones editoriales, proyectos documentales, marcas vinculadas al viaje y propuestas que exijan sensibilidad visual y criterio narrativo.",
-      "note": "Si buscas una mirada con contexto, gusto y capacidad real de trabajar sobre el terreno, escríbeme.",
+      "title": "Si el proyecto es serio, podemos hablar.",
+      "intro": "Colaboro en documentales, editoriales, campañas, expediciones y proyectos visuales donde haga falta gusto, oficio y una implicación real con el trabajo.",
+      "note": "Agenda abierta para proyectos seleccionados en 2026 y 2027. Si buscas una mirada cuidada, contexto y compromiso serio con la ejecución, escríbeme.",
       "formspree_endpoint": "https://formspree.io/f/your-form-id",
       "contact_items": [
         {
@@ -336,9 +350,9 @@
     },
     "en": {
       "eyebrow": "Contact",
-      "title": "Let’s talk about a project worth making well.",
-      "intro": "I work on commissions, editorial collaborations, documentary projects, travel-related brands, and proposals that ask for visual sensitivity and narrative judgment.",
-      "note": "If you are looking for a visual approach with context, taste, and real field capability, feel free to get in touch.",
+      "title": "If the project is serious, we should talk.",
+      "intro": "I collaborate on documentaries, editorial commissions, campaigns, expeditions, and visual projects that call for taste, craft, and genuine commitment to the work.",
+      "note": "Schedule open for selected projects in 2026 and 2027. If you are looking for a thoughtful visual approach, strong context, and serious execution, get in touch.",
       "formspree_endpoint": "https://formspree.io/f/your-form-id",
       "contact_items": [
         {

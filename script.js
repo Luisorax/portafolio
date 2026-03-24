@@ -1,4 +1,3 @@
-
 async function loadContent() {
   const response = await fetch('content/site.json', { cache: 'no-store' });
   if (!response.ok) throw new Error('No se pudo cargar el contenido editable.');
@@ -14,7 +13,6 @@ function create(el, className, text) {
 }
 
 const pageKey = document.body.dataset.page || 'home';
-const pageFiles = { home: 'index.html', about: 'about.html', work: 'work.html', services: 'services.html', contact: 'contact.html' };
 
 function getLanguage() {
   if (window.location.pathname.startsWith('/en')) return 'en';
@@ -33,16 +31,16 @@ function altLanguage(lang) { return lang === 'es' ? 'en' : 'es'; }
 
 function renderHeader(site, lang) {
   const nav = [
-    ['about', site.nav.about],
     ['work', site.nav.work],
     ['services', site.nav.services],
+    ['about', site.nav.about],
     ['contact', site.nav.contact]
   ];
 
   const header = create('header', 'site-header');
   header.innerHTML = `
     <div class="header-inner">
-      <a class="logo" href="${buildHref('home', lang)}" aria-label="Home">${site.title}<small>${site.tagline}</small></a>
+      <a class="logo" href="${buildHref('home', lang)}" aria-label="Home">${site.title}</a>
       <div class="header-actions">
         <button class="nav-toggle" type="button" aria-expanded="false">Menú</button>
         <a class="lang-switch" href="${buildHref(pageKey, altLanguage(lang))}" data-lang="${altLanguage(lang)}">${site.lang_switch}</a>
@@ -95,24 +93,37 @@ function revealOnScroll() {
   items.forEach((item) => obs.observe(item));
 }
 
-function renderHome(data, lang) {
+function renderHome(data) {
   const { site, home } = data;
   const main = qs('#app');
   main.innerHTML = `
     <section class="hero wrap">
-      <div class="hero-grid">
+      <div class="hero-grid image-forward">
         <div class="hero-copy fade-in">
-          <div class="kicker">${site.hero_label}</div>
+          <div class="kicker">${home.intro_kicker}</div>
           <h1>${site.hero_title}</h1>
           <div class="hero-intro">${site.hero_intro}</div>
+          <p class="hero-paragraph">${home.intro_text}</p>
+          <div class="cta-row">
+            <a class="button" href="${site.hero_cta_link}">${site.hero_cta_label}</a>
+            <a class="button-secondary" href="${site.hero_secondary_link}">${site.hero_secondary_label}</a>
+          </div>
         </div>
-        <aside class="hero-side fade-in">
-          <div class="hero-side-inner">
-            <p class="hero-side-kicker">${home.intro_kicker}</p>
-            <p>${home.intro_text}</p>
-            <div class="cta-row">
-              <a class="button" href="${site.hero_cta_link}">${site.hero_cta_label}</a>
-              <a class="button-secondary" href="${site.hero_secondary_link}">${site.hero_secondary_label}</a>
+        <aside class="hero-visual fade-in" aria-label="Visual placeholders for future photography">
+          <div class="image-stack">
+            <figure class="image-block image-large vertical">
+              <span>${home.featured_projects[0]?.meta || ''}</span>
+              <strong>${home.featured_projects[0]?.title || ''}</strong>
+            </figure>
+            <div class="image-row">
+              <figure class="image-block image-small horizontal">
+                <span>${home.featured_projects[1]?.meta || ''}</span>
+                <strong>${home.featured_projects[1]?.title || ''}</strong>
+              </figure>
+              <figure class="image-block image-small portrait">
+                <span>${home.featured_projects[2]?.meta || ''}</span>
+                <strong>${home.featured_projects[2]?.title || ''}</strong>
+              </figure>
             </div>
           </div>
         </aside>
@@ -120,19 +131,25 @@ function renderHome(data, lang) {
     </section>
 
     <section class="section wrap fade-in home-featured">
-      <div class="split home-intro-block">
+      <div class="split home-intro-block home-intro-wide">
         <div>
           <div class="kicker">${home.featured_title}</div>
           <h2 class="section-title">${home.featured_heading}</h2>
         </div>
         <div class="lead">${home.featured_text}</div>
       </div>
-      <div class="card-grid featured-grid" style="margin-top: 34px;">
-        ${home.featured_projects.map((item) => `
-          <article class="card featured-card">
-            <div class="meta">${item.meta}</div>
-            <h3>${item.title}</h3>
-            <p>${item.description}</p>
+      <div class="feature-strip" style="margin-top: 34px;">
+        ${home.featured_projects.map((item, index) => `
+          <article class="feature-item fade-in ${index === 1 ? 'offset' : ''}">
+            <div class="image-block ${index === 0 ? 'horizontal-wide' : index === 1 ? 'vertical' : 'square'}">
+              <span>${item.meta}</span>
+              <strong>${item.title}</strong>
+            </div>
+            <div class="feature-copy">
+              <div class="meta">${item.meta}</div>
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+            </div>
           </article>
         `).join('')}
       </div>
@@ -149,16 +166,18 @@ function renderAbout(data) {
       <h1>${about.title}</h1>
       <div class="page-intro">${about.lead}</div>
     </section>
-    <section class="section wrap">
-      <div class="split">
-        <div class="highlight-box fade-in">
-          <div class="kicker">${about.highlight_title}</div>
-          <ul>${about.highlights.map((item) => `<li>${item}</li>`).join('')}</ul>
-        </div>
-        <div class="stack fade-in">
-          ${about.paragraphs.map((p) => `<p>${p}</p>`).join('')}
-        </div>
+    <section class="section wrap about-layout">
+      <div class="highlight-box fade-in">
+        <div class="kicker">${about.highlight_title}</div>
+        <ul>${about.highlights.map((item) => `<li>${item}</li>`).join('')}</ul>
       </div>
+      <div class="stack fade-in about-copy">
+        ${about.paragraphs.map((p) => `<p>${p}</p>`).join('')}
+      </div>
+      <figure class="image-block about-image fade-in vertical-wide">
+        <span>${about.eyebrow}</span>
+        <strong>${about.title}</strong>
+      </figure>
     </section>
   `;
 }
@@ -167,23 +186,42 @@ function renderWork(data) {
   const { work } = data;
   const main = qs('#app');
   main.innerHTML = `
-    <section class="page-hero wrap fade-in">
+    <section class="page-hero wrap fade-in work-hero">
       <div class="kicker">${work.eyebrow}</div>
       <h1>${work.title}</h1>
       <div class="page-intro">${work.intro}</div>
     </section>
-    <section class="section wrap">
-      <div class="project-list">
-        ${work.projects.map((item) => `
-          <article class="project-card fade-in">
+    <section class="section wrap work-showcase">
+      ${work.projects.map((item, index) => `
+        <article class="work-chapter fade-in ${index % 2 ? 'reverse' : ''}">
+          <div class="work-visual-group">
+            <figure class="image-block chapter-main ${index === 0 ? 'vertical-tall' : index === 1 ? 'horizontal-wide' : 'portrait-large'}">
+              <span>${item.image_hint || item.format}</span>
+              <strong>${item.title}</strong>
+            </figure>
+            <figure class="image-block chapter-secondary ${index === 0 ? 'square' : 'landscape-small'}">
+              <span>${item.location}</span>
+              <strong>${item.year}</strong>
+            </figure>
+          </div>
+          <div class="work-copy">
             <div class="meta">${item.location} · ${item.year} · ${item.format}</div>
-            <h3>${item.title}</h3>
-            <p>${item.intro}</p>
+            <h2>${item.title}</h2>
+            <p class="lead chapter-lead">${item.intro}</p>
             <p><strong>${work.labels.explores}:</strong> ${item.explores}</p>
             <p><strong>${work.labels.approach}:</strong> ${item.approach}</p>
             <p><strong>${work.labels.context}:</strong> ${item.context}</p>
-          </article>
-        `).join('')}
+          </div>
+        </article>
+      `).join('')}
+    </section>
+    <section class="section wrap fade-in closing-panel">
+      <div class="split closing-split">
+        <div>
+          <div class="kicker">2026 / 2027</div>
+          <h2 class="section-title">${work.closing_title || ''}</h2>
+        </div>
+        <div class="lead">${work.closing_text || ''}</div>
       </div>
     </section>
   `;
@@ -200,15 +238,15 @@ function renderServices(data) {
       <h1>${services.title}</h1>
       <div class="page-intro">${services.intro}</div>
     </section>
-    <section class="section wrap services-layout">
+    <section class="section wrap services-layout enhanced">
       <article class="service-feature fade-in">
         <div class="meta">${services.feature_meta}</div>
         <h2>${first.title}</h2>
         <p class="lead">${first.text}</p>
       </article>
-      <div class="services-grid-advanced">
+      <div class="services-grid-advanced editorial-services">
         ${rest.map((item, index) => `
-          <article class="service-card service-card-premium fade-in ${index % 3 === 0 ? 'wide' : ''}">
+          <article class="service-card service-card-premium fade-in ${index === 1 ? 'wide' : ''}">
             <div class="service-card-top">
               <span class="service-index">0${index + 2}</span>
               <div class="service-rule"></div>
@@ -218,6 +256,11 @@ function renderServices(data) {
           </article>
         `).join('')}
       </div>
+      <aside class="availability-panel fade-in">
+        <div class="kicker">2026 / 2027</div>
+        <h3>${services.availability_title || ''}</h3>
+        <p>${services.availability_text || ''}</p>
+      </aside>
     </section>
   `;
 }
@@ -290,7 +333,7 @@ const renderers = { home: renderHome, about: renderAbout, work: renderWork, serv
       es: { home: data.site.title, about: 'Sobre mí', work: 'Trabajo', services: 'Servicios', contact: 'Contacto' },
       en: { home: data.site.title, about: 'About', work: 'Work', services: 'Services', contact: 'Contact' }
     };
-    document.title = `${data.site.title} — ${pageTitles[lang][pageKey] || data.site.tagline}`;
+    document.title = `${data.site.title} — ${pageTitles[lang][pageKey] || data.site.title}`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.content = data.site.seo_description;
     if (!renderers[pageKey]) throw new Error('Esta página ya no está disponible.');
